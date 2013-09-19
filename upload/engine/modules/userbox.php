@@ -10,7 +10,7 @@
  * =======================================================
  * Файл:  userbox.php
  * -------------------------------------------------------
- * Версия: 1.0 (27.06.2013)
+ * Версия: 1.1 (20.09.2013)
  * =======================================================
  */
 
@@ -22,9 +22,13 @@ if (!defined('DATALIFEENGINE'))
 // userName должен быть строкой, хоть это и не обязательно, но проверим.
 $userName = !empty($userName) ? $db->safesql(strip_tags(stripcslashes($userName))) : false;
 
-// Определяем дефолтный аватар, на случай если юзер не загрузил его.
-$dafAvatar = !empty($dafaultAvatar) ? $dafaultAvatar : 'dleimages/noavatar.png';
+// Если userName=this, то берём из реквеста id пользователя.
+$currentUser = ($userName == 'this') ? $_REQUEST['dle_user_id'] : false ;
 
+// Определяем дефолтный аватар, на случай если юзер не загрузил его.
+$defAvatar = !empty($defaultAvatar) ? $defaultAvatar : 'dleimages/noavatar.png';
+
+// определяем шаблон вывода.
 $template = !empty($template) ? $template : 'default';
 
 $showUserInfo = false;
@@ -35,7 +39,7 @@ if ($userName) {
 	
 	// Попытаемся подцепить данные из кеша.
 
-	$showUserInfo = dle_cache('avatar_'.md5($userName.$dafAvatar.$template), $config['skin']);
+	$showUserInfo = dle_cache('userbox_'.md5($userName.$currentUser.$defAvatar.$template), $config['skin']);
 	
 	// Еcли в кеше ничего нет - работаем.
 	if (!$showUserInfo) {
@@ -60,6 +64,11 @@ if ($userName) {
 			// Объединяем его для вставки в запрос.
 			$selectFields = implode(', ', $arrUF);
 
+			// Определяемся с требуемым запросом на имя или id юзера. 
+			$userSelect = ($currentUser) ? 'user_id="'.$currentUser.'"' : 'name="'.$userName.'"';
+			
+			echo "<pre class='dle-pre'>123"; print_r($currentUser ); echo "</pre>";
+
 			// Подрубаем наш шаблон, если он есть
 			if(!isset($tpl)) {
 				$tpl = new dle_template();
@@ -72,10 +81,10 @@ if ($userName) {
 
 			
 			// super_query побыстрее, чем обычный запрос (наверное).
-			$userField = $db->super_query("SELECT ".$selectFields.", xfields FROM ".USERPREFIX."_users WHERE name='".$userName."'");
+			$userField = $db->super_query("SELECT ".$selectFields.", xfields FROM ".USERPREFIX."_users WHERE ".$userSelect);
 
-			// Если имя пользователя совпадает с тем, что задано в строке подключения - работаем.
-			if ($userField['name'] === $userName) {
+			// Если имя или ID пользователя совпадает с тем, что задано в строке подключения - работаем.
+			if ($userField['name'] === $userName || !is_null($userField['user_id']) === $currentUser) {
 				if (count(explode("@", $userField['foto'])) == 2) {
 					// Если граватар
 					$userField['foto'] = 'http://www.gravatar.com/avatar/' . md5(trim($userField['foto'])) . '?s=' . intval($user_group[$userField['user_group']]['max_foto']);	
@@ -85,7 +94,7 @@ if ($userName) {
 					if($userField['foto'] and (file_exists(ROOT_DIR . "/uploads/fotos/" . $userField['foto']))) 
 						$userField['foto'] = $config['http_home_url'].'uploads/fotos/'.$userField['foto'];
 					else 
-						$userField['foto'] = $config['http_home_url'].'templates/'.$config['skin'].'/'.$dafAvatar;	
+						$userField['foto'] = $config['http_home_url'].'templates/'.$config['skin'].'/'.$defAvatar;	
 
 				}
 
@@ -164,7 +173,7 @@ if ($userName) {
 
 				$showUserInfo = $tpl->result['showUserInfo'];
 				// Записываем результат работы в кеш.
-				create_cache('avatar_'.md5($userName.$dafAvatar.$template), $showUserInfo, $config['skin']);
+				create_cache('userbox_'.md5($userName.$currentUser.$defAvatar.$template), $showUserInfo, $config['skin']);
 
 				$tpl->clear();
 			} else {
