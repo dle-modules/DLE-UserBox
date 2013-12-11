@@ -61,3 +61,7 @@ __UserBox__ - простой модуль для вывода информаци
 * `&template=mytemplate` - шаблон вывода.
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pafnuty/userbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
