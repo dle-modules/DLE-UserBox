@@ -3,8 +3,9 @@
 ![version](https://img.shields.io/badge/version-1.6.0-red.svg?style=flat-square "Version")
 ![DLE](https://img.shields.io/badge/DLE-11.0_--_13.x-green.svg?style=flat-square "DLE Version")
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/dle-modules/DLE-UserBox/blob/master/LICENSE)
-[Ссылка на документацию и описание поддерживаемых тегов](https://readme.lazydev.pro/dle-userbox.html)
-Простой модуль для вывода информации о любом пользователе в любом месте сайта на DLE 12.x - 13.x
+[![Documentation](https://img.shields.io/badge/Documentation-Link-blue.svg?style=flat-square)](https://readme.lazydev.pro/dle-userbox.html)
+
+Простой модуль для вывода информации о любом пользователе в любом месте сайта на DLE 12.0 - 13.x
 
 Понадобится, если нужно вывести ***не только аватар*** и с минимальной нагрузкой на сайт!
 Модуль будет полезен тогда, когда нужно вывести информацию о каком-либо пользователе в произвольном месте сайта (В т.ч. вне шаблона полной новости).
