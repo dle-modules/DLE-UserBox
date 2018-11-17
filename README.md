@@ -1,7 +1,7 @@
 # DLE UserBox
 
 ![version](https://img.shields.io/badge/version-1.6.0-red.svg?style=flat-square "Version")
-![DLE](https://img.shields.io/badge/DLE-11.0_--_13.x-green.svg?style=flat-square "DLE Version")
+![DLE](https://img.shields.io/badge/DLE-12.0_--_13.x-green.svg?style=flat-square "DLE Version")
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/dle-modules/DLE-UserBox/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/Documentation-Link-blue.svg?style=flat-square)](https://readme.lazydev.pro/dle-userbox.html)
 
