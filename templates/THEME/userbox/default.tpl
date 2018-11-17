@@ -1,54 +1,33 @@
-[user_email]<span style="color:red">user_email:</span> {user_email} <br>[/user_email]
-[not_user_email] <span style="color:red">user_email:</span> не заполнено <br>[/not_user_email]
+<span style="color:red">Ссылка на аватар пользователя:</span> {foto} <br>
+<span style="color:red">Вывод Gravatar:</span> {gravatar} <br>
+<span style="color:red">E-mail пользователя:</span> {email} <br>
+<span style="color:red">Группа пользователя с префиксом и суффиксом:</span> {user-group} <br>
+<span style="color:red">Дата регистрации:</span> {registration} <br>
+<span style="color:red">Дата последнего входа:</span> {lastdate} <br>
+<span style="color:red">Ник пользователя:</span> {user-name} <br>
+<span style="color:red">ID пользователя:</span> {user-id} <br>
 
-[user_name]<span style="color:red">user_name:</span> {user_name} <br>[/user_name]
-[not_user_name] <span style="color:red">user_name:</span> не заполнено <br>[/not_user_name]
+[news-num]<span style="color:red">Количество добавленных новостей:</span> {news-num} <a href="{news}">Все новости пользователя</a> <a href="{rss}">RSS</a> <br>[/news-num]
+[not-news-num]<span style="color:red">Пользователь не добавлял новостей</span> <br>[/not-news-num]
 
-[user_news_num]<span style="color:red">user_news_num:</span> {user_news_num} <br>[/user_news_num]
-[not_user_news_num] <span style="color:red">user_news_num:</span> не заполнено <br>[/not_user_news_num]
-[user_comm_num]<span style="color:red">user_comm_num:</span> {user_comm_num} <br>[/user_comm_num]
-[not_user_comm_num] <span style="color:red">user_comm_num:</span> не заполнено <br>[/not_user_comm_num]
+[comm-num]<span style="color:red">Количество добавленных комментариев:</span> {comm-num} <a href="{comments}">Все комментарии пользователя</a> <br>[/comm-num]
+[not-comm-num]<span style="color:red">Пользователь не добавлял комментариев</span> <br>[/not-comm-num]
 
-[user_user_id]<span style="color:red">user_user_id:</span> {user_user_id} <br>[/user_user_id]
-[not_user_user_id] <span style="color:red">user_user_id:</span> не заполнено <br>[/not_user_user_id]
+[xfgiven_x]<span style="color:red">Выводится дополнительное поле "x", если поле не пустое:</span> [xfvalue_x] <br>[/xfgiven_x]
+[xfnotgiven_x]<span style="color:red">Выводится текст, указанный в них, если дополнительное поле пользователя не было задано, где X это имя дополнительного поля профиля пользователя</span> <br>[/xfnotgiven_x]
 
-[user_user_group]<span style="color:red">user_user_group:</span> {user_user_group} <br>[/user_user_group]
-[not_user_user_group] <span style="color:red">user_user_group:</span> не заполнено <br>[/not_user_user_group]
+[fullname]<span style="color:red">Полное имя пользователя:</span> {fullname} <br>[/fullname]
+[not-fullname]<span style="color:red">Пользователь не задал имя</span> <br>[/not-fullname]
 
-[user_lastdate]<span style="color:red">user_lastdate:</span> {user_lastdate} <br>[/user_lastdate]
-[not_user_lastdate] <span style="color:red">user_lastdate:</span> не заполнено <br>[/not_user_lastdate]
+[land]<span style="color:red">Место жительства пользователя:</span> {land} <br>[/land]
+[not-land]<span style="color:red">Пользователь не указал место жительства</span> <br>[/not-land]
 
-[user_reg_date]<span style="color:red">user_reg_date:</span> {user_reg_date} <br>[/user_reg_date]
-[not_user_reg_date] <span style="color:red">user_reg_date:</span> не заполнено <br>[/not_user_reg_date]
+[info]<span style="color:red">Информация о пользователя:</span> {info} <br>[/info]
+[not-info]<span style="color:red">Пользователь не указал информацию о себе</span> <br>[/not-info]
 
-[user_info]<span style="color:red">user_info:</span> {user_info} <br>[/user_info]
-[not_user_info] <span style="color:red">user_info:</span> не заполнено <br>[/not_user_info]
+[signature]<span style="color:red">Подпись пользователя:</span> {signature} <br>[/signature]
+[not-signature]<span style="color:red">Пользователь не указал подпись</span> <br>[/not-signature]
 
-[user_foto]<span style="color:red">user_foto:</span> {user_foto} <br>[/user_foto]
-[not_user_foto] <span style="color:red">user_foto:</span> не заполнено <br>[/not_user_foto]
+[banned]<span style="color:red">Пользователь забанен</span><br>[/banned]
+[not-banned]<span style="color:red">Пользователь не забанен</span> <br>[/not-banned]
 
-[user_fullname]<span style="color:red">user_fullname:</span> {user_fullname} <br>[/user_fullname]
-[not_user_fullname] <span style="color:red">user_fullname:</span> не заполнено <br>[/not_user_fullname]
-
-[user_land]<span style="color:red">user_land:</span> {user_land} <br>[/user_land]
-[not_user_land] <span style="color:red">user_land:</span> не заполнено <br>[/not_user_land]
-
-[user_icq]<span style="color:red">user_icq:</span> {user_icq} <br>[/user_icq]
-[not_user_icq] <span style="color:red">user_icq:</span> не заполнено <br>[/not_user_icq]
-
-
-<span style="color: red">ссылка на профиль юзера: </span>{user_url} <br>
-<div style="clear: both;">{user_rating}</div>
-<hr>
-
-[ufgiven_string]<span style="color:red;">string: </span>[ufvalue_string] <br>[/ufgiven_string]
-[ufnotgiven_string]<span style="color:red;">string:</span> не заполнено<br>[/ufnotgiven_string]
-
-[ufgiven_multi]<span style="color:red;">multi: </span>[ufvalue_multi] <br>[/ufgiven_multi]
-[ufnotgiven_multi]<span style="color:red;">multi:</span> не заполнено<br>[/ufnotgiven_multi]
-
-[ufgiven_multi1]<span style="color:red;">multi1: </span>[ufvalue_multi1] <br>[/ufgiven_multi1]
-[ufnotgiven_multi1]<span style="color:red;">multi1:</span> не заполнено<br>[/ufnotgiven_multi1]
-
-[ufgiven_list]<span style="color:red;">list: </span>[ufvalue_list] <br>[/ufgiven_list]
-[ufnotgiven_list]<span style="color:red;">list:</span> не заполнено<br>[/ufnotgiven_list]

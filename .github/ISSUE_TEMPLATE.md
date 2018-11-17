@@ -1,3 +1,3 @@
 
 ---
-@pafnuty не забудь посмотреть этот тиккет :ticket:
+@pafnuty @lazyphpdev не забудь посмотреть этот тиккет :ticket:
