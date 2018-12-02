@@ -1,6 +1,6 @@
 # DLE UserBox
 
-![version](https://img.shields.io/badge/version-1.6.0-red.svg?style=flat-square "Version")
+![version](https://img.shields.io/badge/version-1.7.0-red.svg?style=flat-square "Version")
 ![DLE](https://img.shields.io/badge/DLE-12.0_--_13.x-green.svg?style=flat-square "DLE Version")
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/dle-modules/DLE-UserBox/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/Documentation-Link-blue.svg?style=flat-square)](https://readme.lazydev.pro/dle-userbox.html)
@@ -42,6 +42,12 @@
 - Место жительства пользователя
 - Забанен ли пользователь
 - Дополнительные поля пользователя (выводятся только те, которые не являются личными)
+- Онлайн / Офлайн пользователь
+- Вывод данных только если пользователь совпадает с тем для кого выводяться данные
+- Вывод количества новых сообщений и всех.
+- Вывод количества закладок.
+- Вывод ссылки на пользователя.
+- Вывод рейтинга новостей и комментариев пользователя, количество голосов, количество рейтинга, лайков и дизлайков для 4 типа рейтинга.
 - Можно добавлять свои ячейки с таблицы _users
 
 ## Установка
