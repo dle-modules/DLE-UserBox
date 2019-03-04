@@ -3,7 +3,7 @@
  * DLE UserBox
  *
  * @copyright 2018 ПафНутиЙ, LazyDev
- * @version   1.6.0
+ * @version   1.7.1
  * @link      https://pafnuty.name https://lazydev.pro
  * @git       https://github.com/dle-modules/DLE-UserBox
  */
@@ -151,7 +151,7 @@ if (!$showUserInfo) {
 					$tpl->set('{' . $key . '}', stripslashes($row[$key]));
 				} else {
 					$tpl->set_block('', ["'\\[{$key}\\](.*?)\\[/{$key}\\]'si" => '', "'\\[not-{$key}\\](.*?)\\[/not-{$key}\\]'si" => '\\1']);
-					$tpl->set('{' . $fieldKey . '}', '');
+					$tpl->set('{' . $key . '}', '');
 				}
 			}
 			
